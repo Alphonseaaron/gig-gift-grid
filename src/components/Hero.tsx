@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Play, Star, TrendingUp, Users } from "lucide-react";
@@ -26,12 +27,16 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-gradient-primary hover:opacity-90 text-lg px-8 py-6 animate-pulse-glow">
-                <Play className="w-5 h-5 mr-2" />
-                Start Earning Now
+              <Button asChild size="lg" className="bg-gradient-primary hover:opacity-90 text-lg px-8 py-6 animate-pulse-glow">
+                <Link to="/business/create">
+                  <Play className="w-5 h-5 mr-2" />
+                  Start Earning Now
+                </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-                See How It Works
+              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6">
+                <Link to="/help">
+                  See How It Works
+                </Link>
               </Button>
             </div>
             
