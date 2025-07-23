@@ -83,6 +83,7 @@ const SurveyCard = ({
         <Button 
           className="w-full bg-gradient-primary hover:opacity-90 group-hover:animate-pulse-glow"
           size="sm"
+          onClick={() => window.location.href = `/survey/${Math.floor(Math.random() * 1000)}`}
         >
           Start Survey
         </Button>

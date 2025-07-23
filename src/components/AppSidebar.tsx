@@ -25,9 +25,8 @@ import {
 
 const userItems = [
   { title: "Dashboard", url: "/", icon: Home },
-  { title: "My Surveys", url: "/surveys", icon: BarChart3 },
-  { title: "Earnings", url: "/earnings", icon: Coins },
-  { title: "Leaderboard", url: "/leaderboard", icon: TrendingUp },
+  { title: "Available Surveys", url: "/surveys", icon: BarChart3 },
+  { title: "My Profile", url: "/profile", icon: Users },
 ];
 
 const businessItems = [

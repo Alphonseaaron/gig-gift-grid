@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -18,6 +19,7 @@ import {
 } from "lucide-react";
 
 const BusinessDashboard = () => {
+  const navigate = useNavigate();
   const [surveys] = useState([
     {
       id: 1,
@@ -72,7 +74,10 @@ const BusinessDashboard = () => {
           <h1 className="text-3xl font-bold">Business Dashboard</h1>
           <p className="text-muted-foreground">Manage your surveys and track performance</p>
         </div>
-        <Button className="bg-gradient-primary hover:opacity-90">
+        <Button 
+          className="bg-gradient-primary hover:opacity-90"
+          onClick={() => navigate("/business/create")}
+        >
           <Plus className="w-4 h-4 mr-2" />
           Create New Survey
         </Button>
@@ -172,7 +177,11 @@ const BusinessDashboard = () => {
                         </div>
                       </div>
                       <div className="flex space-x-2">
-                        <Button variant="outline" size="sm">
+                        <Button 
+                          variant="outline" 
+                          size="sm"
+                          onClick={() => navigate(`/business/results/${survey.id}`)}
+                        >
                           <Eye className="w-4 h-4" />
                         </Button>
                         <Button variant="outline" size="sm">
